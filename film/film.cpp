@@ -3,3 +3,12 @@
 //
 
 #include "film.h"
+using namespace std;
+film::film(string n, int s, int d, int t, string c, int i) {
+    name=n;
+    score=s;
+    date=d;
+    time=t;
+    country=c;
+    id=i;
+}

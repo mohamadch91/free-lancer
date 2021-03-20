@@ -4,10 +4,17 @@
 
 #ifndef FILM_FILM_H
 #define FILM_FILM_H
-
-
+using namespace std;
+#include <iostream>
 class film {
-        int 
+public:
+        string name;
+        int score;
+        int date;
+        int time;
+        string country;
+        int id;
+        film(string n,int s,int d, int t,string c,int i);
 };
 
 

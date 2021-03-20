@@ -1,0 +1,3 @@
+S:/project/free-lancer/film/cmake-build-debug/CMakeFiles/film.dir
+S:/project/free-lancer/film/cmake-build-debug/CMakeFiles/edit_cache.dir
+S:/project/free-lancer/film/cmake-build-debug/CMakeFiles/rebuild_cache.dir
