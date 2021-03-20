@@ -4,6 +4,5 @@
 CMakeFiles/film.dir/film.cpp.obj: ../film.cpp
 CMakeFiles/film.dir/film.cpp.obj: ../film.h
 
-CMakeFiles/film.dir/main.cpp.obj: ../film.h
 CMakeFiles/film.dir/main.cpp.obj: ../main.cpp
 

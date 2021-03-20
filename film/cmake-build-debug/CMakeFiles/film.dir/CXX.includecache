@@ -6,21 +6,5 @@
 
 #IncludeRegexTransform: 
 
-S:/project/free-lancer/film/film.h
-iostream
--
-
 S:/project/free-lancer/film/main.cpp
-iostream
--
-film.h
-S:/project/free-lancer/film/film.h
-vector
--
-sstream
--
-time.h
--
-bits/stdc++.h
--
 

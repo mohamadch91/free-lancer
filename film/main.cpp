@@ -7,15 +7,15 @@
 
 using namespace std;
 
-string * commandSeprator (string x){
+void commandSeprator (string x,string words[6]){
 stringstream ss(x);
 string word;
-string  words[6];
+
 int  i =0;
 while (ss >> word) {
 words[i++]=word;
 }
-    return words;
+
 }
 void Swap (film **a, film* *b)
 {
@@ -54,7 +54,8 @@ int main() {
    srand(time (NULL));
     string command;
     getline(cin,command);
-    string *words=commandSeprator(command);
+    string words[6];
+    commandSeprator(command,words);
     while (true){
         if(words[0]=="add"){
             x.push_back(new film(words[1],stoi(words[2]),stoi(words[3]),stoi(words[4]),words[5],rand()));
@@ -62,7 +63,7 @@ int main() {
         if(words[0]=="remove"){
             string name=words[1];
             for (int i = 0; i <x.size() ; ++i) {
-                if(x[i]->name=="name"){
+                if(x[i]->name==name){
                     //delete x[i];
                     x.erase(x.begin()+i);
                 }
@@ -79,14 +80,14 @@ int main() {
         if(words[0]=="show"){
             string name=words[1];
             for (int i = 0; i <x.size() ; ++i) {
-                if(x[i]->name=="name"){
+                if(x[i]->name==name){
                     cout<<x[i]->name<<" "<<x[i]->id<<x[i]->country<<x[i]->score<<x[i]->date<<x[i]->time<<endl;
                 }
             }
         }
         if(words[0]=="show-all"){
             for (int i = 0; i <x.size() ; ++i) {
-                    cout<<x[i]->name<<" "<<x[i]->id<<x[i]->country<<x[i]->score<<x[i]->date<<x[i]->time<<endl;
+                    cout<<x[i]->name<<" "<<x[i]->id<<" "<<x[i]->country<<" "<<x[i]->score<<" "<<x[i]->date<<" "<<x[i]->time<<" "<<endl;
 
             }
         }
@@ -97,7 +98,7 @@ int main() {
 
             }
             sum/=x.size();
-            cout<<sum;
+            cout<<sum<<endl;
         }
         if(words[0]=="help"){
             cout<<"type add add <movie_name> <score> <data> <time> <country>"<<endl;
@@ -109,7 +110,8 @@ int main() {
             cout<<" for find average score in films tyoe average-score"<<endl;
         }
         getline(cin,command);
-        string *words=commandSeprator(command);
+
+        commandSeprator(command,words);
     }
 
     return 0;
